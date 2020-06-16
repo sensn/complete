@@ -16,4 +16,8 @@ public class GreetingController {
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
+	@GetMapping("/greeting1")
+	public Greeting greeting1(@RequestParam(value = "name", defaultValue = "Worllld") String name) {
+		return new Greeting(counter.incrementAndGet(), String.format(template, name));
+	}
 }
